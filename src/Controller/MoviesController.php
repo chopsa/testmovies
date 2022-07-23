@@ -96,7 +96,7 @@ class MoviesController extends AbstractController
         $form->handleRequest($request); // handle request to database
         $imagePath = $form->get('imagePath')->getData();    //grab the imagepath value and only get the data from it
 
-        // will need to see why this section up to line 123 does not work
+        // will need to see why this section up to line 123 does not work. button does not save the imagepath
         if($form->isSubmitted() && $form->isValid()) {
             if($imagePath) {    
                 if($movie->getImagePath() !== null) {
