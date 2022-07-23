@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ClassTestController extends AbstractController
 {
-    // just a test
+    // just a test and adding another line
     #[Route('/class/test', name: 'app_class_test')]
     public function index(): Response
     {
