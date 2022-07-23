@@ -1,0 +1,11 @@
+twig:
+    default_path: '%kernel.project_dir%/templates'
+    globals: 
+        author: Code With Dary
+    paths:
+        'templates/movies/static': 'static'
+        'templates/user': 'user'
+
+when@test:
+    twig:
+        strict_variables: true

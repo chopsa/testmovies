@@ -1,0 +1,28 @@
+controllers:
+     resource: ../src/Controller/
+     type: attribute
+
+movie_list:
+    path: /movies
+    controller: App\Controller\MoviesController::index
+
+movie_individual:
+    path: /movies/{id}
+    controller: App\Controller\MoviesController::show
+
+movie_notifications:
+    path: /notifications
+    controller: App\Controller\MoviesController::notifications
+
+movie_privacy:
+    path: /privacy
+    controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController
+    defaults:
+        template: 'movies/static/privacy.html.twig'
+        statusCode: 200
+        maxAge: 86400
+        sharedAge: 86400
+        private: true
+        context:
+            site_name: 'Movie'
+            theme: 'dark'
